@@ -1,13 +1,13 @@
 import {ApolloServer} from 'apollo-server';
 import typeDefs from './Schemas/typeDefs';
 import resolvers from './Resolvers/index';
-require('dotenv/config');
+import 'dotenv/config';
 
 import mongoose from 'mongoose';
 
 const {DB_USER, DB_PASS, DB_HOST, DB_PORT, DB_NAME, APP_PORT} = process.env;
 
-mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`, {
+mongoose.connect(`mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}?authSource=admin`, {
   useNewUrlParser: true, 
   useUnifiedTopology: true,
 });
