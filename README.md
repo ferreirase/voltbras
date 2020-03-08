@@ -13,7 +13,7 @@ Clone ou baixe este repositório; ao entrar na pasta raiz('voltbras'), abrir o t
 Espere as configurações do comando acima terminar e então acesse em seu navegador 'http://localhost:4000' para ter acesso ao Playground e realizar as operações na API. 
 
 # Operações na API 
-### query { name mass hasStation }
+### query { suitablePlanets { name mass hasStation } }
 >*Busca na api da Arcsecond planetas que têm a massa maior que 25M_jup. Retorna nome do planeta, massa e se tem ou no estação instalada(true/false)*
 
 ### query { stations }
