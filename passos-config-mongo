@@ -1,9 +1,0 @@
-docker exec -it 'nome container banco' 'nome da imagem' admin
-
-db.createUser(
-    {
-      user: "root",
-      pwd: "root",
-      roles: [ "root" ]
-    }
-)
